@@ -24,7 +24,7 @@ class PlazoFijoController extends Controller
         //Validacion de usuario. Esto va a ser cambiado a SERVICE
 
         $montoFinal = $this->montoFinal($monto, $dias);
-        return view('calculoFinal', ['nombre' => $nombre, 'apellido' => $apellido, 'dias' => $dias, 'monto' => $monto, 'montoFinal' => $montoFinal]);
+        return view('calculoFinal', ['nombre' => $nombre, 'apellido' => $apellido, 'dias' => $dias, 'monto' => $monto, 'montoFinal' => round($montoFinal, 2)]);
     }
 
     private function getPorcentaje($dias){
@@ -65,20 +65,10 @@ class PlazoFijoController extends Controller
         $monto = $request->input('monto');
         $dias = $request->input('dias');
 
-
         $validacionDatos = $request->validate([
             'monto' => 'bail|required|numeric',
             'dias' => 'bail|required|integer',
         ]);
-
-        //if (empty($monto) && !is_numeric($monto) && !$monto >= 1000)
-        //{
-        //    redirect()->back()->withErrors(['monto' => '*El monto no puede ser vacio, no puede ser letras y tamcopo ser menor a $1000']);
-        //}
-        //if (empty($dias) && !is_numeric($dias) && $dias >= 30)
-        //{
-        //   redirect()->back()->withErrors(['dias' => '*Se debe de ingresar un numero valido, y el minimo de dias es 30 y tampoco ser vacio']);
-        //}
 
         $reinversiones = [$this->montoFinal($monto, $dias)];
 
