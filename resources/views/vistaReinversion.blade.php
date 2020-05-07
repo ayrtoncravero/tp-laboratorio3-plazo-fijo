@@ -3,15 +3,9 @@
         <title>Resultado de reinversion</title>
     </head>
     <body>
-        <label>Nombre:</label>
-        <p>{{ $nombre }}</p>
-        <label>Apellido:</label>
-        <p>{{ $apellido }}</p>
-        <label>Monto inicial: $</label>
-        <p>{{ $monto }}</p>
-        <label>Dias:</label>
-        <p>{{ $dias }}</p>
-        <label>Monto de reinversion: $</label>
-        <p>{{ $reinversiones }}</p>
+        <p>Nombre y apellido: {{ $nombre }}{{ $apellido }}</p>
+        <p>Monto inicial: ${{ $monto }}</p>
+        <p>Dias: {{ $dias }}</p>
+        <p>Monto de reinversion: ${{ $reinversiones }}</p>
     </body>
 </html>

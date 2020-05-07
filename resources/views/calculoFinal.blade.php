@@ -7,19 +7,19 @@
             @csrf
             <h1>Monto de su plazo fijo</h1>
             <label>Nombre:</label>
-            <input name="nombre" type="text" value="{{ $nombre }}"></input>
+            <input name="nombre" type="text" readonly value="{{ $nombre }}"></input>
             <br>
             <label>Apellido:</label>
-            <input name="apellido" type="text" value="{{ $apellido }}"></input>
+            <input name="apellido" type="text" readonly value="{{ $apellido }}"></input>
             <br>
             <label>Monto: $</label>
-            <input name="monto" type="text" value="{{ $monto }}"></input>
+            <input name="monto" type="text" readonly value="{{ $monto }}"></input>
             <br>
             <label>Dias:</label>
-            <input name="dias" type="text" value="{{ $dias }}"></input>
+            <input name="dias" type="text" readonly value="{{ $dias }}"></input>
             <br>
             <label>Monto final: $</label>
-            <input name="montoFinal" type="text" value="{{ $montoFinal }}"></input>
+            <input name="montoFinal" type="text" readonly value="{{ $montoFinal }}"></input>
             <br>
             <label>Reinvertir: </label>
             <br>
