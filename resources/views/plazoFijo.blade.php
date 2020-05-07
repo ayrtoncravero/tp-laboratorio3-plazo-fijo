@@ -3,13 +3,19 @@
         <title>Plazo fijo</title>
     </head>
     <body>
+
+    @if($errors->any())
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
+
         <form action="/plazoFijo" method="POST">
             @csrf
             <label>Nombre: </label>
             <input type="text" name="nombre">
-            @if($errors->has('nombre'))
-                {{ $errors->first('nombre') }}
-            @endif
             <br>
             <label>Apellido: </label>
             <input type="text" name="apellido">

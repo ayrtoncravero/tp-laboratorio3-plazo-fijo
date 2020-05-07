@@ -6,11 +6,23 @@
         <form action="/plazoFijo/reinvertir" method="POST">
             @csrf
             <h1>Monto de su plazo fijo</h1>
-            <input type="text" readonly value="{{ $nombre }} {{ $apellido }}">Nombre: {{ $nombre }} | Apellido: {{ $apellido }}</input>
-            <input type="text" readonly value="{{ $monto }}">Monto inicial: ${{ $monto }}</input>
-            <input type="text" readonly value="{{ $dias }}">Cantidad de dias: {{ $dias }}</input>
-            <input type="text" readonly value="{{ $montoFinal }}">Monto final: ${{ $montoFinal }}</input>
+            <label>Nombre:</label>
+            <input name="nombre" type="text" value="{{ $nombre }}"></input>
+            <br>
+            <label>Apellido:</label>
+            <input name="apellido" type="text" value="{{ $apellido }}"></input>
+            <br>
+            <label>Monto: $</label>
+            <input name="monto" type="text" value="{{ $monto }}"></input>
+            <br>
+            <label>Dias:</label>
+            <input name="dias" type="text" value="{{ $dias }}"></input>
+            <br>
+            <label>Monto final: $</label>
+            <input name="montoFinal" type="text" value="{{ $montoFinal }}"></input>
+            <br>
             <label>Reinvertir: </label>
+            <br>
             <input type="submit" value="reinvertir">
         </form>
     </body>
