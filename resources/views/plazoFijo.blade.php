@@ -8,9 +8,9 @@
     </head>
     <body>
         <div class="card-header">
-            <h1>Ingrese sus datos</h1>
+            <h1 c>Ingrese sus datos</h1>
         </div>
-        <div class="container-fluid row-1 aling-item">
+        <div class="row aling-items-center justify-content-center vh-100">
             <div class="col-sm-4">
                 <div>
                     @if($errors->any())

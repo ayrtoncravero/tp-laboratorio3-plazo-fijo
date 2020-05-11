@@ -62,13 +62,21 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            /*Estilos de la imagen*/
+            .img{
+                width: 100%;
+                height: 100%;
+            }
         </style>
     </head>
     <body>
-        <div class="container-fluid row-1">
-            <div class="col-sm-5">
-                <h1>Home plazo fijo</h1>
-                <a href="/plazoFijo">Plazo fijo</a>
+        <div class="card border-0 rounded-0">
+            <img class="card-img img" src="https://picsum.photos/700/400?random">
+            <div class="card-img-overlay row justify-content-center">
+                <div class="align-self-center">
+                    <a href="/plazoFijo" class="btn btn-outline-light rounded-pill pl-5 pr-5">Plazo fijo</a>
+                </div>
             </div>
         </div>
     </body>
