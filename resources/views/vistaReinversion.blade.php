@@ -15,7 +15,7 @@
                     <div class="card-body">
                         <h4>Datos personales:</h4>
                         <br>
-                        <p>Nombre y apellido: {{ $nombre }}{{ $apellido }}</p>
+                        <p>Nombre y apellido: {{ $nombre }} {{ $apellido }}</p>
                         <p>Monto inicial: ${{ $monto }}</p>
                         <p>Dias: {{ $dias }}</p>
                         <p>Monto de reinversion: ${{ $reinversiones }}</p>

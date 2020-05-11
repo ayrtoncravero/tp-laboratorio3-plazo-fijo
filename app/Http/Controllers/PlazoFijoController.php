@@ -37,10 +37,14 @@ class PlazoFijoController extends Controller
         $reinversiones = [$this->plazoFijoService->calcular($data['monto'], $data['dias'])];
 
         for ($i = 1; $i < 4; $i++) {
-            $reinversiones[] = $this->plazoFijoService->calcular($dias, $reinversiones[$i - 1]);
+            $reinversiones[] = $this->plazoFijoService->calcular($reinversiones[$i - 1], $dias);
+        }
+        $reinversionesString = '';
+        foreach ($reinversiones as $monto){
+            $reinversionesString .="$monto, ";
         }
 
-        $data['reinversiones'] = implode($reinversiones);
+        $data['reinversiones'] = $reinversionesString;
 
         return view('vistaReinversion', $data);
     }
